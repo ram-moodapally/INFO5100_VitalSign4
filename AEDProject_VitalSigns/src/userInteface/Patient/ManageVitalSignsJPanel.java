@@ -95,6 +95,12 @@ public class ManageVitalSignsJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[2];
                 row[0] = vitalSign;
                 row[1] = VitalSignStatus(patientAge, vitalSign);
+                if(row[1].equals("Abnormal")){
+                    person.setHasVitalSigns(true);
+                }
+                else{
+                    person.setHasVitalSigns(false);
+                }
                 model.addRow(row);
             }
         }
